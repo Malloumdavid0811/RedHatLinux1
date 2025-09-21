@@ -50,32 +50,31 @@ Nous allons dans cette partie mettre en place nos deux serveurs web de type apac
 
 ![1758423184265](https://github.com/user-attachments/assets/82c44d90-87c8-4fec-ac81-1fbc7e9d766c)
 
-### b) Déploiement de notre stack applicative frontend et backend avec docker-compose
+### b) Démarrons nos deux serveurs web, et assurons-nous qu’ils sont bien fonctionnels (regardons les fichiers de logs lors d’une connexion)
 
-![1756133542334](https://github.com/user-attachments/assets/e92cc84c-d148-4907-9a60-b53175aafe05)
+Installation de rsyslog sur les deux serveurs
 
-![1756133553540](https://github.com/user-attachments/assets/16281b14-019a-4905-92fd-cd1914e401be)
+![1758423201964](https://github.com/user-attachments/assets/2cb24536-500d-45aa-a8e0-b1674876d213)
 
-![1756133574130](https://github.com/user-attachments/assets/d634876b-f82a-4bf1-a020-341a7258491b)
+![1758423213281](https://github.com/user-attachments/assets/7e3a968f-ee7f-4092-ac61-4609c00ad81a)
 
-![1756133583948](https://github.com/user-attachments/assets/11b2045e-dfc6-4367-9e6a-4bd1addef6cc)
+### c) Ajoutons une page web index.html sur nos deux serveurs avec un contenu qui permettra de différencier
 
-### f) Modification de l'index.php
+![1758423224985](https://github.com/user-attachments/assets/6dac3151-402f-4522-b17d-488141883b00)
 
-![1756133598081](https://github.com/user-attachments/assets/505f1e2e-26ec-4cd7-a1cd-5af12f6af289)
+![1758423235239](https://github.com/user-attachments/assets/49d0459f-129b-4935-aa2f-672a16ac31f6)
 
-![1756133608938](https://github.com/user-attachments/assets/2609ad81-57fb-4c24-ba69-306cf3124d79)
+### d) Testons l’accès à nos pages web respectives
 
-### g) Vérification du fonctionnement de l'application
+![1758423313222](https://github.com/user-attachments/assets/ac16e43c-5e7f-4bbf-bd82-99380156fc0b)
 
-![1756133622919](https://github.com/user-attachments/assets/9eb578de-0c7c-44ef-a825-c3f5cb5e6bee)
+![1758423346256](https://github.com/user-attachments/assets/39cfb2d3-607b-436e-bc66-b4477aed407f)
 
-### h) Déploiement du régistre privé
+![1758423392600](https://github.com/user-attachments/assets/59510a3b-9059-4188-a57e-c28078220135)
 
-![1756133643201](https://github.com/user-attachments/assets/397a42bb-2b6c-4e1f-b1f1-cc86b478470f)
+## 3. Mise en place d’HAProxy :
 
-![1756133658156](https://github.com/user-attachments/assets/e2211031-ba37-4133-a23a-e3481d51ac27)
+Nous allons maintenant intégrer le nouveau service HAProxy.
 
-### i) Déploiement de l'IHM (Interface Homme-Machine) du registre privé
+### Sur notre troisième serveur, Installons HAProxy
 
-![1756133675009](https://github.com/user-attachments/assets/a937db3d-776b-42fc-a1a9-67fa1799ef77)
