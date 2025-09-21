@@ -11,7 +11,9 @@ Ce TP aura pour but de Caractériser les éléments nécessaires à la qualité 
 Il nous permettra de savoir définir des éléments nécessaires à la continuité d'un service :
 
 • Évaluation et maintien de la qualité de service.
+
 • Installation d’une solution d’infrastructure.
+
 • Administration sur site ou à distance des éléments d'un réseau, de serveurs, de services et d'équipements terminaux.
 
 ## 1) Architecture et contexte :
@@ -136,4 +138,3 @@ Ceci pouvant être utile afin de s'assurer de la bonne répartition de charge ou
 ### d) Analysons bien l’interface et faisons des tests (test d’arrêt d’un serveur web, requête curl sur le HAProxy et le web, etc…)
 
 ![1758423549987](https://github.com/user-attachments/assets/d22178d5-0868-4304-aaa4-1c0bb3a7b0fa)
-
