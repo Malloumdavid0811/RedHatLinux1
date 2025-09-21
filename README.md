@@ -1,6 +1,28 @@
 # THEMATIQUE: Projet personnel sur "Red Hat Linux" avec HAProxy pour la haute disponibilité des serveurs web 
 
-## A travers les étapes suivantes :
+Dans ce TP, nous allons voir comment mettre en place une architecture web haute disponibilité.
+
+La répartition de charge est donc une des technologies qui participe à la haute disponibilité.
+
+Elle s’entend le plus souvent au niveau des serveurs HTTP (par exemple, sites à forte audience devant pouvoir gérer des centaines de milliers de requêtes par secondes), c’est-à-dire en frontal sur une plate-forme web comme nous allons le mettre en œuvre dans ce TP. Mais le même principe peut s’appliquer sur n’importe quel service aux utilisateurs ou service réseau.
+
+Ce TP aura pour but de Caractériser les éléments nécessaires à la qualité et à la continuité d'un service, Installer et configurer les éléments nécessaires à la qualité et à la continuité du service, Contrôler et améliorer les performances d’un service, Valider et documenter la qualité et la continuité.
+
+Il vous permettra de savoir définir des éléments nécessaires à la continuité d'un service :
+
+• Évaluation et maintien de la qualité de service.
+• Installation d’une solution d’infrastructure.
+• Administration sur site ou à distance des éléments d'un réseau, de serveurs, de services et d'équipements terminaux.
+
+## 1. Architecture et contexte :
+
+Une configuration relativement simple va nous permettre de mettre en œuvre la répartition de charge sur deux serveurs Web préalablement installés.
+
+![1758423108419](https://github.com/user-attachments/assets/bd976b3c-76be-4b1a-951c-fb88e54af885)
+
+La demande de connexion est adressée au serveur HAProxy (coté client) qui détermine, selon l'algorithme configuré, le serveur auquel il va affecter la connexion, parmi les serveurs disponibles (en l'espèce serveur web 1 et serveur web 2).
+
+Une fois la connexion TCP établie, l’équipement de répartition de charge devient pratiquement transparent : dans son rôle de base, il transfère les paquets IP du client vers le serveur sélectionné et vice versa jusqu’à fermeture de la connexion.
 
 ### a) Récupération du code du mini-projet avec git
 
@@ -57,6 +79,7 @@
 ![1756133728422](https://github.com/user-attachments/assets/7540b704-63f9-44cf-ab41-eac3094e09aa)
 
 ![1756133741689](https://github.com/user-attachments/assets/1d0a5e01-c19d-4568-83c5-851e20f92164)
+
 
 
 
