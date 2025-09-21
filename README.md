@@ -38,7 +38,7 @@ Une fois la connexion TCP établie, l’équipement de répartition de charge de
 
 ### c) Assurons-nous que les serveurs sont joignables entre eux (faire des ping pour être sûr)
 
-![1758423149972](https://github.com/user-attachments/assets/2fc6f728-17a8-4ccb-a25c-44e4e4acfa58)
+<img width="588" height="486" alt="Sans titre" src="https://github.com/user-attachments/assets/29f32ee7-1c68-4bba-a112-e0c3c20c14fc" />
 
 ### d) Création du fichier docker-compose
 
@@ -83,6 +83,7 @@ Une fois la connexion TCP établie, l’équipement de répartition de charge de
 ![1756133728422](https://github.com/user-attachments/assets/7540b704-63f9-44cf-ab41-eac3094e09aa)
 
 ![1756133741689](https://github.com/user-attachments/assets/1d0a5e01-c19d-4568-83c5-851e20f92164)
+
 
 
 
