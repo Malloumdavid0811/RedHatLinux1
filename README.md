@@ -8,7 +8,7 @@ Elle s’entend le plus souvent au niveau des serveurs HTTP (par exemple, sites 
 
 Ce TP aura pour but de Caractériser les éléments nécessaires à la qualité et à la continuité d'un service, Installer et configurer les éléments nécessaires à la qualité et à la continuité du service, Contrôler et améliorer les performances d’un service, Valider et documenter la qualité et la continuité.
 
-Il vous permettra de savoir définir des éléments nécessaires à la continuité d'un service :
+Il nous permettra de savoir définir des éléments nécessaires à la continuité d'un service :
 
 • Évaluation et maintien de la qualité de service.
 • Installation d’une solution d’infrastructure.
@@ -28,14 +28,17 @@ Une fois la connexion TCP établie, l’équipement de répartition de charge de
 
 ![1758423116890](https://github.com/user-attachments/assets/86cb1437-1051-49e5-84c4-4fa1b89dafaa)
 
+![1758423125536](https://github.com/user-attachments/assets/8775995c-1aa8-4efa-856d-cd04dfc6dfa9)
 
-### b) Création du Dockerfile de l'application flask
+![1758423134043](https://github.com/user-attachments/assets/6b555d6a-0bbc-4c7a-b570-3aa71d8376d8)
 
-![1756133497949](https://github.com/user-attachments/assets/c651ff06-19f8-4ce6-9cc7-3ed2932ec720)
+### b) Changement du nom de nos machines et rajout dans le DNS local (/etc/hosts, /etc/hostname)
 
-### c) Build de l'image student-age
+![1758423141982](https://github.com/user-attachments/assets/9fff0883-86f7-4777-b5c5-b624b8b7b88d)
 
-![1756133508706](https://github.com/user-attachments/assets/b2e30cc3-6b95-4c97-bbaa-3178cbe5e5c2)
+### c) Assurons-nous que les serveurs sont joignables entre eux (faire des ping pour être sûr)
+
+![1758423149972](https://github.com/user-attachments/assets/2fc6f728-17a8-4ccb-a25c-44e4e4acfa58)
 
 ### d) Création du fichier docker-compose
 
@@ -80,6 +83,7 @@ Une fois la connexion TCP établie, l’équipement de répartition de charge de
 ![1756133728422](https://github.com/user-attachments/assets/7540b704-63f9-44cf-ab41-eac3094e09aa)
 
 ![1756133741689](https://github.com/user-attachments/assets/1d0a5e01-c19d-4568-83c5-851e20f92164)
+
 
 
 
