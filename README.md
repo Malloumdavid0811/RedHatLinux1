@@ -72,9 +72,68 @@ Installation de rsyslog sur les deux serveurs
 
 ![1758423392600](https://github.com/user-attachments/assets/59510a3b-9059-4188-a57e-c28078220135)
 
-## 3. Mise en place d’HAProxy :
+## 3) Mise en place d’HAProxy :
 
 Nous allons maintenant intégrer le nouveau service HAProxy.
 
-### Sur notre troisième serveur, Installons HAProxy
+### a) Sur notre troisième serveur, installons HAProxy
+
+![1758423418819](https://github.com/user-attachments/assets/cf0dc0af-d8bd-4bb0-a01a-318784bfda9c)
+
+### b) Avec de la documentation que nous retrouverons sur le net, mettons en place un logging de notre HAProxy, qui permettra de tracer et de stocker tous les logs dans « /var/log/haproxy.log »
+
+![1758423431770](https://github.com/user-attachments/assets/fe7926f8-32f2-4992-af46-f1a931fd067d)
+
+![1758423442965](https://github.com/user-attachments/assets/a2e51435-7447-4813-a574-c86fbd5e9a14)
+
+![1758423460418](https://github.com/user-attachments/assets/3e8dcb9e-83e7-4019-aa97-b2325d3524f1)
+
+### c) Démarrons notre HAProxy, et assurons-nous qu’il est bien fonctionnel (faire une requête curl sur notre service HAProxy)
+
+Un fichier de configuration HAProxy est composé de sections telles que frontend, backend, default, global et listen.
+
+Chaque section à une fonctions bien particulière dans l’utilisation du HAProxy, ainsi :
+
+o global : La section global apparaît en haut de votre fichier de configuration. Elle définit les directives au niveau du processus telles que le nombre maximum de connexions à accepter, l'emplacement de stockage des journaux et l'utilisateur et le groupe sous lesquels le processus doit s'exécuter.
+
+o backend : Une section backend définit un pool de serveurs vers lesquels l'équilibreur de charge acheminera les requêtes, Vous pouvez ajouter autant de sections backendque nécessaire. Chaque mot-clé backend est suivi d'une étiquette, telle que web_servers, pour le différencier des autres.
+
+o frontend : Une section frontend définit les adresses IP et les ports auxquels les clients peuvent se connecter, Vous pouvez ajouter autant de sections frontales que nécessaire pour exposer divers sites Web ou applications sur Internet.
+
+o default : Une section default stocke les paramètres communs qui seront hérités par les sections frontend et backend qui la suivent, elle offre un moyen de condenser de longues configurations en réduisant les lignes dupliquées.
+
+o listen : Une section listen définit un proxy complet avec son frontend et son backend combinées en une seule section., elle est généralement utile pour le trafic TCP uniquement.
+
+![1758423477781](https://github.com/user-attachments/assets/b3fc750b-4066-4b6e-8e99-7d7467dc2184)
+
+### d) Procédons à une première configuration d'HAProxy avec mise en place des d’un « backend » nommé « my-backend », qui fera du round robin sur vos deux serveurs web 1 et 2, et avec un check sur ces deux serveurs ; Rajoutons sur notre section « frontend » une directive « default_backend » qui pointera sur notre nouveau backend fraichement configuré et trouvons la bonne commande nous permettant de vérifier que la configuration de notre fichier est valide (commande proposée par HAProxy)
+
+![1758423488627](https://github.com/user-attachments/assets/ef55d890-9d28-4b92-b68f-081baef855bd)
+
+### e) Redémarrons notre HAProxy, et assurons-nous que cette fois les requêtes sont bien loadbalancé sur nos deux serveurs web (faire des tests avec des requêtes curl)
+
+![1758423506572](https://github.com/user-attachments/assets/7eb9c379-90c6-41d0-b1fe-5b9ca80fc3a0)
+
+## 4) Mise en place des stats :
+
+Nous allons maintenant passer aux stats sur votre architecture et de votre flux.
+
+HAProxy permet d'afficher une interface regroupant l'ensemble des statistiques du service (frontend, backend, etc.).
+Ceci pouvant être utile afin de s'assurer de la bonne répartition de charge ou simplement du bon fonctionnement du service.
+
+### a) Avec de la documentation que nous retrouverons sur le net, commençons par rajouter une nouvelle section « listen » nommée « stats », dans laquelle nous allons rajouter les bons paramètres pour avoir une url de stats
+
+![1758423517767](https://github.com/user-attachments/assets/bf3c0930-ac51-4fc4-a954-0808ac7eebfb)
+
+### b) Redémarrons HAProxy, et essayons de nous connecter sur cette interface graphique
+
+![1758423528313](https://github.com/user-attachments/assets/bc73d95d-d093-426d-85cc-c98527f1a754)
+
+### c) Changeons les paramètres pour mettre un refresh automatique sur notre interface toutes les 10 secondes
+
+![1758423539723](https://github.com/user-attachments/assets/d566c729-14f7-43ce-83a6-30d850156f71)
+
+### d) Analysons bien l’interface et faisons des tests (test d’arrêt d’un serveur web, requête curl sur le HAProxy et le web, etc…)
+
+![1758423549987](https://github.com/user-attachments/assets/d22178d5-0868-4304-aaa4-1c0bb3a7b0fa)
 
