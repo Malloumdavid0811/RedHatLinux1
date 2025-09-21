@@ -14,7 +14,7 @@ Il vous permettra de savoir définir des éléments nécessaires à la continuit
 • Installation d’une solution d’infrastructure.
 • Administration sur site ou à distance des éléments d'un réseau, de serveurs, de services et d'équipements terminaux.
 
-## 1. Architecture et contexte :
+## 1) Architecture et contexte :
 
 Une configuration relativement simple va nous permettre de mettre en œuvre la répartition de charge sur deux serveurs Web préalablement installés.
 
@@ -24,9 +24,10 @@ La demande de connexion est adressée au serveur HAProxy (coté client) qui dét
 
 Une fois la connexion TCP établie, l’équipement de répartition de charge devient pratiquement transparent : dans son rôle de base, il transfère les paquets IP du client vers le serveur sélectionné et vice versa jusqu’à fermeture de la connexion.
 
-### a) Récupération du code du mini-projet avec git
+### a) Installation de trois machines virtuelles de type Rocky Linux 9
 
-![1756133488172](https://github.com/user-attachments/assets/a62b1f7f-1802-47e5-a7e9-490822058bd0)
+![1758423116890](https://github.com/user-attachments/assets/86cb1437-1051-49e5-84c4-4fa1b89dafaa)
+
 
 ### b) Création du Dockerfile de l'application flask
 
@@ -79,6 +80,7 @@ Une fois la connexion TCP établie, l’équipement de répartition de charge de
 ![1756133728422](https://github.com/user-attachments/assets/7540b704-63f9-44cf-ab41-eac3094e09aa)
 
 ![1756133741689](https://github.com/user-attachments/assets/1d0a5e01-c19d-4568-83c5-851e20f92164)
+
 
 
 
