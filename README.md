@@ -1,9 +1,4 @@
-# student-list 
-This repo is a simple application to list student with a webserver (PHP) and API (Flask)
-
-![project](https://user-images.githubusercontent.com/18481009/84582395-ba230b00-adeb-11ea-9453-22ed1be7e268.jpg)
-
-# THEMATIQUE: Mini-projet Docker - Création, déploiement et publication d'un microservice avec un serveur Web (langage PHP) et une API (Micro framework Flask en langage Python) 
+# THEMATIQUE: Projet personnel sur "Red Hat Linux" avec HAProxy pour la haute dsiponibilité des serveurs web 
 
 ## A travers les étapes suivantes :
 
@@ -62,6 +57,7 @@ This repo is a simple application to list student with a webserver (PHP) and API
 ![1756133728422](https://github.com/user-attachments/assets/7540b704-63f9-44cf-ab41-eac3094e09aa)
 
 ![1756133741689](https://github.com/user-attachments/assets/1d0a5e01-c19d-4568-83c5-851e20f92164)
+
 
 
 
