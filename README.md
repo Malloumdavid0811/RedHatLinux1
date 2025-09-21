@@ -40,11 +40,17 @@ Une fois la connexion TCP établie, l’équipement de répartition de charge de
 
 <img width="588" height="486" alt="Sans titre" src="https://github.com/user-attachments/assets/29f32ee7-1c68-4bba-a112-e0c3c20c14fc" />
 
-### d) Création du fichier docker-compose
+## 2. Mise en place des deux serveurs web :
 
-![1756133533330](https://github.com/user-attachments/assets/d4d7b905-7888-4db6-8146-61e76edc0ed0)
+Nous allons dans cette partie mettre en place nos deux serveurs web de type apache.
 
-### e) Déploiement de notre stack applicative frontend et backend avec docker-compose
+### a) Installons sur vos deux serveurs web un apache
+
+![1758423171368](https://github.com/user-attachments/assets/2336139b-2399-4ca3-98bf-f1a16d18c78b)
+
+![1758423184265](https://github.com/user-attachments/assets/82c44d90-87c8-4fec-ac81-1fbc7e9d766c)
+
+### b) Déploiement de notre stack applicative frontend et backend avec docker-compose
 
 ![1756133542334](https://github.com/user-attachments/assets/e92cc84c-d148-4907-9a60-b53175aafe05)
 
@@ -73,22 +79,3 @@ Une fois la connexion TCP établie, l’équipement de répartition de charge de
 ### i) Déploiement de l'IHM (Interface Homme-Machine) du registre privé
 
 ![1756133675009](https://github.com/user-attachments/assets/a937db3d-776b-42fc-a1a9-67fa1799ef77)
-
-![1756133692067](https://github.com/user-attachments/assets/e06c6b73-f947-414e-ae2d-da58e990502b)
-
-![1756133704694](https://github.com/user-attachments/assets/9484551f-907b-47c2-8bff-e9c1d479fc73)
-
-![1756133716818](https://github.com/user-attachments/assets/67b4a35b-794f-4e17-8538-72be60a17dad)
-
-![1756133728422](https://github.com/user-attachments/assets/7540b704-63f9-44cf-ab41-eac3094e09aa)
-
-![1756133741689](https://github.com/user-attachments/assets/1d0a5e01-c19d-4568-83c5-851e20f92164)
-
-
-
-
-
-
-
-
-
